@@ -1,0 +1,104 @@
+@import "~normalize.css";
+
+$accent-color: #1874cd;
+$border-color: #eee;
+$text-color: #333;
+
+body {
+  font: 14px/20px BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.quiz {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+
+  &-timeline {
+    font-size: 12px;
+    line-height: 20px;
+    min-width: 400px;
+    height: 20px;
+    padding: 5px;
+    white-space: nowrap;
+    border: 2px solid $border-color;
+    border-radius: 20px;
+
+    &__number {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 0 8px;
+      line-height: inherit;
+      text-align: center;
+      color: $text-color;
+      border-radius: 50%;
+    }
+
+    &__current {
+      background-color: $accent-color;
+      color: #fff;
+    }
+  }
+
+  &-question {
+    margin-top: 25px;
+
+    &__body {
+      padding: 30px;
+      text-align: left;
+      border: 2px solid $border-color;
+      border-radius: 10px;
+    }
+
+    &__variants {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    &__variant {
+      position: relative;
+      line-height: 16px;
+      margin-top: 4px;
+      padding-left: 25px;
+    }
+
+    &__label {
+      font-size: 14px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__input {
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      margin: -7px 0 0 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    &__submit {
+      position: relative;
+      display: table;
+      margin-top: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 20px;
+      border: 2px solid $accent-color;
+      border-radius: 4px;
+      color: #fff;
+      background-color: $accent-color;
+      transition: opacity 0.15s ease-in;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}
